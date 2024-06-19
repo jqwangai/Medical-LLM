@@ -95,7 +95,7 @@
   <tr>
     <td rowspan="4">Professional Medical Organization Corpus</td>
     <td>Clinical Notes</td> 
-    <td></td>
+    <td><a href="https://github.com/MIT-LCP/mimic-code/">MIMIC</a></td>
   </tr>
   <tr>
     <td>Electronic Health Records</td>
