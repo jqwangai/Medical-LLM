@@ -49,24 +49,49 @@
   <tr>
     <td rowspan="5">Existing Public Datasets</td>
     <td>Unstructured Data</td>
-    <td>[UFAL Medical Corpus](https://ufal.mff.cuni.cz/ufal\_medical\_corpus), <a href="https://github.com/togethercomputer/RedPajama-Data">RedPajama</a> </td>
+    <td><a href="https://ufal.mff.cuni.cz/ufal\_medical\_corpus">UFAL Medical Corpus</a>, <a href="https://github.com/togethercomputer/RedPajama-Data">RedPajama</a>, <a href="https://commoncrawl.org">Common Crawl</a> </td>
   </tr>
   <tr>
     <td>QA</td>
-    <td>Huatuo-26M, ChiMed, MedDialog, CMtMedQA, PubMedQA, MedQA,</td>
+    <td><a href="https://huggingface.co/datasets/FreedomIntelligence/Huatuo26M-Lite">Huatuo-26M</a>, <a href="https://aclanthology.org/W19-5027/">ChiMed</a>, <a href="https://aclanthology.org/2020.emnlp-main.743/">MedDialog</a>, <a href="https://github.com/SupritYoung/Zhongjing">CMtMedQA</a>, <a href="https://arxiv.org/abs/1909.06146">PubMedQA</a>, <a href="https://www.mdpi.com/2076-3417/11/14/6421">MedQA</a></td>
   </tr>
   <tr>
     <td>Human Preference Data</td>
-    <td>Zhongjing\_rlhf, MedicalGPT</td>
+    <td><a href="https://github.com/SupritYoung/Zhongjing">Zhongjing\_rlhf</a>, <a href="https://github.com/shibing624/MedicalGPT">MedicalGPT</a></td>
   </tr>
   <tr>
     <td>Knowledge Graphs</td>
-    <td>UMLS, CMeKG, BIOS</td>
+    <td><a href="https://www.nlm.nih.gov/research/umls/index.html">UMLS</a>, <a href="https://github.com/king-yyf/CMeKG_tools">CMeKG</a>, <a href="https://bios.idea.edu.cn">BIOS</a></td>
   </tr>
   <tr>
     <td>NLP Tasks</td>
     <td>-</td>
   </tr></thead>
+  <tr>
+    <td rowspan="6">Public Medical Corpus</td>
+    <td>Medical Encyclopedias</td>
+    <td>MedlinePlus, Mayo Clinic, <br>WebMD</td>
+  </tr>
+  <tr>
+    <td>Medical Textbooks</td>
+    <td>FreeBooks4Doctors, Internet Archive, Bookboon</td>
+  </tr>
+  <tr>
+    <td>Medical Academic Literature</td>
+    <td>PubMed, Embase, ScienceDirect</td>
+  </tr>
+  <tr>
+    <td>Medical Websites</td>
+    <td>Teladoc Health,<br>Ding Xiang Yuan, Ping An Good Doctor, <br>98point6, Haodf<br></td>
+  </tr>
+  <tr>
+    <td>Medical Guidelines</td>
+    <td>CCO, CDC, NICE, WHO</td>
+  </tr>
+  <tr>
+    <td>Package Inserts</td>
+    <td>RxList, Drugs</td>
+  </tr>
 </table>
 
 ## Data Processing Prompt
