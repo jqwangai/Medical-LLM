@@ -49,7 +49,7 @@
   <tr>
     <td rowspan="5">Existing Public Datasets</td>
     <td>Unstructured Data</td>
-    <td>UFAL Medical Corpus, RedPajama </td>
+    <td>[UFAL Medical Corpus](https://ufal.mff.cuni.cz/ufal\_medical\_corpus), <a href="https://github.com/togethercomputer/RedPajama-Data">RedPajama</a> </td>
   </tr>
   <tr>
     <td>QA</td>
