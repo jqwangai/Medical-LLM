@@ -57,7 +57,7 @@
   </tr>
   <tr>
     <td>Human Preference Data</td>
-    <td><a href="https://github.com/SupritYoung/Zhongjing">Zhongjing\_rlhf</a>, <a href="https://github.com/shibing624/MedicalGPT">MedicalGPT</a></td>
+    <td><a href="https://github.com/SupritYoung/Zhongjing">Zhongjing_rlhf</a>, <a href="https://github.com/shibing624/MedicalGPT">MedicalGPT</a></td>
   </tr>
   <tr>
     <td>Knowledge Graphs</td>
@@ -70,27 +70,44 @@
   <tr>
     <td rowspan="6">Public Medical Corpus</td>
     <td>Medical Encyclopedias</td>
-    <td>MedlinePlus, Mayo Clinic, <br>WebMD</td>
+    <td><a href="https://medlineplus.gov">MedlinePlus</a>, <a href="https://bios.idea.edu.cn">Mayo Clinic</a>, <a href="https://www.webmd.com">WebMD</a></td>
   </tr>
   <tr>
     <td>Medical Textbooks</td>
-    <td>FreeBooks4Doctors, Internet Archive, Bookboon</td>
+    <td><a href="http://freebooks4doctors.com">FreeBooks4Doctors</a>, <a href="https://archive.org">Internet Archive</a>, <a href="https://bookboon.com">Bookboon</a></td>
   </tr>
   <tr>
     <td>Medical Academic Literature</td>
-    <td>PubMed, Embase, ScienceDirect</td>
+    <td><a href="https://pubmed.ncbi.nlm.nih.gov">PubMed</a>, <a href="https://www.embase.com">Embase</a>, <a href="https://www.sciencedirect.com">ScienceDirect</a></td>
   </tr>
   <tr>
     <td>Medical Websites</td>
-    <td>Teladoc Health,<br>Ding Xiang Yuan, Ping An Good Doctor, <br>98point6, Haodf<br></td>
+    <td><a href="https://www.teladochealth.com">Teladoc Health</a>, <a href="https://www.dxy.cn">Ding Xiang Yuan</a>, <a href="https://www.pagd.net">Ping An Good Doctor</a>, <a href="https://www.98point6.com">98point6</a>, <a href="https://www.haodf.com">Haodf</a></td>
   </tr>
   <tr>
     <td>Medical Guidelines</td>
-    <td>CCO, CDC, NICE, WHO</td>
+    <td><a href="https://www.cancercareontario.ca/en/guidelines-advice">CCO</a>, <a href="https://www.cdc.gov">CDC</a>, <a href="National Institute for Health and Care Excellence">NICE</a>, <a href="https://www.who.int/publications/who-guidelines">WHO</a></td>
   </tr>
   <tr>
     <td>Package Inserts</td>
-    <td>RxList, Drugs</td>
+    <td><a href="https://www.rxlist.com">RxList</a>, <a href="https://www.drugs.com">Drugs</a></td>
+  </tr>
+  <tr>
+    <td rowspan="4">Professional Medical Organization Corpus</td>
+    <td>Clinical Notes</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>Electronic Health Records</td>
+    <td><a href="https://eicu-crd.mit.edu/">eICU</a>, <a href="https://mimic.mit.edu/docs/iv/modules/hosp/">MIMIC-IV</a>,  <a href="https://www.cprd.com/">CPRD</a></td>
+  </tr>
+  <tr>
+    <td>Medical Prescription</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Doctor-Patient Conversation</td>
+    <td></td>
   </tr>
 </table>
 
