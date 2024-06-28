@@ -239,7 +239,48 @@ User Prompt: 1.你要为每对<指令，知识>生成一个对话，每个对话
 4.对话应该是有逻辑的，不要出现不合理的问题和回答。5.格式应该为:{"1":{"user":"","doctor":""}。
 ${output in step1}$
 ```
+Apollo
+```
+Prompts for Generating QA Pairs from Texts
 
+Prompt for Generating Question: 
+Please create a <question >that closely aligns with the provided <text>. Ensure that the <question>is formulated in English and does not explicitly reference the text. You may incorporate specific scenarios or contexts in the <question>, allowing the <text>to serve as a comprehensive and precise answer. 
+<text>: {text} 
+<question>: 
+
+
+
+Prompt for Generating Answer: 
+
+You are Apollo, equipped with in-depth knowledge in medicine. Your task is to directly answer the user’s <question>in English. In formulating your response, you must thoughtfully reference the <reference text>, ensuring that your reply does not disclose your reliance on <reference text>. Aim to provide a comprehensive and informative response, incorporating relevant insights from <reference text>to best assist the user. Please be cautious to avoid including any content that might raise ethical concerns. <question>: {question} 
+<reference text>: {reference} 
+<reply>:
+```
+
+Hippocrates
+```
+The GPT-4 prompt used for reinforcement learning from AI-generated feedback.
+
+You are an expert medical knowledge assistant. Given a piece of question and two of its possible answers, output 1 or 2 to indicate which answer is better. A good doctor answer has to be useful, complete, and scientifically-grounded for the patience search query about health. Compare the answers along 11 axes: 
+
+1. Scientific consensus: How does the answer relate to the consensus in the scientific and clinical community? 
+2. Extent of possible harm: What is the extent or possible likelihood of possible harm?
+3. Evidence of correct comprehension: Does the answer contain any evidence of correct reading comprehension? (indication the question has been understood) 
+4. Evidence of correct retrieval: Does the answer contain any evidence of correct recall of knowledge? (mention of a relevant and/or correct fact for answering the question) 
+5. Evidence of correct reasoning: Does the answer contain any evidence of correct reasoning steps? (correct rationale for answering the question) 
+6. Evidence of incorrect comprehension: Does the answer contain any evidence of incorrect reading comprehension? (indication the question has not been understood) 
+7. Evidence of incorrect retrieval: Does the answer contain any evidence of incorrect recall of knowledge? (mention of an irrelevant and/or incorrect fact for answering the question) 
+8. Evidence of incorrect reasoning: Does the answer contain any evidence of incorrect reasoning steps? (incorrect rationale for answering the question) 
+9. Inappropriate/incorrect content: Does the answer contain any content it shouldn’t?
+10. Missing content: Does the answer omit any content it shouldn’t? 
+11. Possibility of bias: Does the answer contain any information that is inapplicable or inaccurate for any particular medical demographic?
+
+Question - #question 
+Answer 1 - #answer1 
+Answer 2 - #answer2 
+Consider if the answer include agreement with scientific consensus, possibility and likelihood of harm, evidence of comprehension, reasoning and retrieval ability, presence of inappropriate, incorrect or missing content, possibility of bias in the answer and explain which answer is one is better along with these axes. 
+Rationale: #GPT-4 choice
+```
 
 ### Instruction Generation
 
@@ -354,6 +395,17 @@ You are [model name] , equipped with in-depth knowledge in [domain] . Your task 
 <reply>:
 ```
 
+Apollo
+```
+Prompt for Generating Doctor-Patient Dialogues
+
+<text>{text}</text> 
+Please create some dialogues between patients and doctors in English based on the above text. The format is: 
+<Patient>Patient’s question</Patient> 
+<Doctor>Doctor’s answer</Doctor> 
+Both patient questions and doctor responses are as complex and detailed as possible.
+
+```
 
 
 ### Evaluation
@@ -452,3 +504,36 @@ Requirements: The response should be to the point and adress the problem of user
 Please compare the performance of the AI assistant in each conversation. You should tell me whether Assistant 1 is ‘better than‘, ‘worse than‘, or ‘equal to‘ Assistant 2. 
 Please first compare their responses and analyze which one is more in line with the given requirements. In the last line, please output a single line containing only a single label selecting from ‘Assistant 1 is better than Assistant 2‘, ‘Assistant 1 is worse than Assistant 2‘, and ‘Assistant 1 is equal to Assistant 2‘.
 ```
+
+MMedLM 2
+
+```
+Zero-shot prompt
+
+You’re a {language} doctor, make a choice based on the question and options. You need to answer the letter of the option instead of answering the entire option or anything else. Options may not be unique.
+```
+```
+Zero-shot prompt
+
+You’re a {language} doctor, make a choice based on the question and options in {language}. You should solve this step-by-step. You must first give the reason in {language} for your choice ends with ’[End]’. Then you must give the answer’s letter directly again. The template is like ’Reason:... [End] Answer: A, B’
+```
+
+```
+Fine-tuning Prompts
+
+You’re a {language} doctor, kindly address the medical queries according to the patient’s account. Answer with the best option directly.
+```
+```
+Fine-tuning Prompts
+
+You’re a {language} doctor, kindly address the medical queries according to the patient’s account in {language}. Let’s solve this step-by-step. You should first give the reason in {language} for your choice. Then you should give the right answer index of the question.
+```
+```
+Ranking Prompt
+
+Please act as an impartial judge and evaluate the quality of the responses provided by six AI assistants to the user question displayed below. You should choose the assistant that follows the user’s instructions and answers the user’s questions better. Your evaluation should consider factors such as the helpfulness, relevance, accuracy, depth, creativity, and level of detail of their responses. Begin your evaluation by comparing the six responses. Avoid any position biases and ensure that the order in which the responses were presented does not influence your decision. Do not allow the length of the responses to influence your evaluation. Do not favor certain names of the assistants. Be as objective as possible. Your output is the ordering of these six models from high to low. Output your final verdict from high to low by strictly following this format: Model A, Model B, Model C, Model D, Model E, and Model F.
+```
+
+Me-LLaMA presents templates of prompt words for multiple evaluation benchmarks.
+
+Aloe also presents prompt templates for several NLP tasks.
