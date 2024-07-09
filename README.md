@@ -21,7 +21,7 @@
 | DISC-MedLLM | Baichuan  | 13 |  | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/FudanDISC/DISC-MedLLM) | 08/2023 |
 | Zhongjing | Ziya-LLaMA  | 13 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | CN | [Link](https://github.com/SupritYoung/Zhongjing) | 08/2023 |
 | BianQue | ChatGLM  | 6 |  | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/scutcyr/BianQue) | 10/2023 |
-| Alpacare | LLaMA  | 7, 13 |  | $\checkmark$ | Full Para. |  | EN | [Link](https://github.com/scutcyr/BianQue) | 10/2023 |
+| Alpacare | LLaMA  | 7, 13 |  | $\checkmark$ | Full Para. |  | EN | [Link](https://github.com/XZhang97666/AlpaCare) | 10/2023 |
 | Qilin-Med | Baichuan  | 7 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | CN | [Link](https://github.com/williamliujl/Qilin-Med) | 10/2023 |
 | Taiyi | Qwen  | 7 |  | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/DUTIR-BioNLP/Taiyi-LLM) | 11/2023 |
 | ChiMed-GPT | Ziya-LLaMA  | 13 | $\checkmark$ | $\checkmark$ | Full Para. | $\checkmark$ | CN | [Link](https://github.com/synlp/ChiMed-GPT) | 11/2023 |
@@ -65,7 +65,7 @@
   </tr>
   <tr>
     <td>NLP Tasks</td>
-    <td>-</td>
+    <td><a href="https://github.com/FreedomIntelligence/Medical_NLP/blob/master/English_vision.md">Medical_NLP</a>, <a href="https://github.com/GanjinZero/awesome_Chinese_medical_NLP">Chinese_medical_NLP</a></td>
   </tr></thead>
   <tr>
     <td rowspan="6">Public Medical Corpus</td>
@@ -103,11 +103,11 @@
   </tr>
   <tr>
     <td>Medical Prescription</td>
-    <td>-</td>
+    <td><a href="https://arxiv.org/pdf/2403.16056">Qibo</a></td>
   </tr>
   <tr>
     <td>Doctor-Patient Conversation</td>
-    <td>-</td>
+    <td><a href="https://github.com/FreedomIntelligence/HuatuoGPT">HuatuoGPT</a>,  <a href="https://github.com/SupritYoung/Zhongjing">Zhongjing</a>, <a href="https://arxiv.org/abs/2312.01040">AntGLM-Med</a>, <a href="https://github.com/OncoGPT1/OncoGPT1">OncoGPT</a>, <a href="https://github.com/scutcyr/BianQue">BianQue</a></td>
   </tr>
 </table>
 
@@ -534,6 +534,16 @@ Ranking Prompt
 Please act as an impartial judge and evaluate the quality of the responses provided by six AI assistants to the user question displayed below. You should choose the assistant that follows the user’s instructions and answers the user’s questions better. Your evaluation should consider factors such as the helpfulness, relevance, accuracy, depth, creativity, and level of detail of their responses. Begin your evaluation by comparing the six responses. Avoid any position biases and ensure that the order in which the responses were presented does not influence your decision. Do not allow the length of the responses to influence your evaluation. Do not favor certain names of the assistants. Be as objective as possible. Your output is the ordering of these six models from high to low. Output your final verdict from high to low by strictly following this format: Model A, Model B, Model C, Model D, Model E, and Model F.
 ```
 
-Me-LLaMA presents templates of prompt words for multiple evaluation benchmarks.
+[Me-LLaMA](https://github.com/BIDS-Xu-Lab/Me-LLaMA) presents templates of prompt words for multiple evaluation benchmarks.
 
-Aloe also presents prompt templates for several NLP tasks.
+[Aloe](https://huggingface.co/HPAI-BSC/Llama3-Aloe-8B-Alpha) also presents prompt templates for several NLP tasks.
+
+## Citation
+```
+@article{wang2024survey,
+  title={A Survey on Large Language Models from General Purpose to Medical Applications: Datasets, Methodologies, and Evaluations},
+  author={Wang, Jinqiang and Ning, Huansheng and Peng, Yi and Wei, Qikai and Tesfai, Daniel and Mao, Wenwei and Zhu, Tao and Huang, Runhe},
+  journal={arXiv preprint arXiv:2406.10303},
+  year={2024}
+}
+```
