@@ -50,7 +50,7 @@
 | Qibo  | LLaMA  | 7, 13 | $\checkmark$ | $\checkmark$ | Full Para. |  | CN |  | 03/2024 |
 | Hippocrates  | LLaMA2 , Mistral  | 7 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | EN, CN | [Link](https://cyberiada.github.io/Hippocrates) | 04/2024 |
 | MING-MOE  | Qwen1.5-Chat  | 1.8, 4, 7, 14 |  | $\checkmark$ | LoRA |  | EN, CN | [Link](https://github.com/MediaBrain-SJTU/MING) | 04/2024 |
-| Lingdan  | Baichuan2  | 13 | $\checkmark$ | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/TCMAI-BJTU/LingdanLLM}) | 04/2024 |
+| Lingdan  | Baichuan2  | 13 | $\checkmark$ | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/TCMAI-BJTU/LingdanLLM) | 04/2024 |
 | Aloe  | Mistral ,  LLaMA3  | 7, 8 |  | $\checkmark$ | Full Para. | $\checkmark$ | EN | [Link](https://huggingface.co/HPAI-BSC/Llama3-Aloe-8B-Alpha) | 05/2024 |
 | PediatricsGPT  | Baichuan2  | 7,13 | $\checkmark$ | $\checkmark$ | Full Para., LoRA | $\checkmark$ | CN |  | 06/2024 |
 | Aqulia-Med  | Aquila  | 7 | $\checkmark$ | $\checkmark$ | Full Para.| $\checkmark$ | EN, CN | [Link](https://huggingface.co/BAAI/AquilaMed-RL)  | 06/2024 |
