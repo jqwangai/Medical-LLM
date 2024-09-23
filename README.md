@@ -1,5 +1,14 @@
 # A Survey on Large Language Models from General Purpose to Medical Applications: Datasets, Methodologies, and Evaluations
 
+## Table of Contents
+
+- [Medical LLMs](#Medical)
+- [Corpus Source](#Corpus)
+- [Prompt Templates](#Prompt)
+  - [Data Processing](#data-processing)
+  - [Instruction Generation](#instruction-generation) 
+  - [Evaluation](#evaluation)
+- [Citation](#Citation)
 ## Medical LLMs
 **Detailed Information of Medical Large Language Models. Note: "Para." denotes parameters, "CP" denotes continued pretraining, "IFT" denotes instruction fine-tuning, and "HA" denotes human alignment.**
 | Models | Backbone | Para. (B) | CP | IFT | IFT Methods | HA | Preferred Languages | Open Sources | Data |
@@ -41,7 +50,10 @@
 | Qibo  | LLaMA  | 7, 13 | $\checkmark$ | $\checkmark$ | Full Para. |  | CN |  | 03/2024 |
 | Hippocrates  | LLaMA2 , Mistral  | 7 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | EN, CN | [Link](https://cyberiada.github.io/Hippocrates) | 04/2024 |
 | MING-MOE  | Qwen1.5-Chat  | 1.8, 4, 7, 14 |  | $\checkmark$ | LoRA |  | EN, CN | [Link](https://github.com/MediaBrain-SJTU/MING) | 04/2024 |
+| Lingdan  | Baichuan2  | 13 | $\checkmark$ | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/TCMAI-BJTU/LingdanLLM}) | 04/2024 |
 | Aloe  | Mistral ,  LLaMA3  | 7, 8 |  | $\checkmark$ | Full Para. | $\checkmark$ | EN | [Link](https://huggingface.co/HPAI-BSC/Llama3-Aloe-8B-Alpha) | 05/2024 |
+| PediatricsGPT  | Baichuan2  | 7,13 | $\checkmark$ | $\checkmark$ | Full Para., LoRA | $\checkmark$ | CN |  | 06/2024 |
+| Aqulia-Med  | Aquila  | 7 | $\checkmark$ | $\checkmark$ | Full Para.| $\checkmark$ | EN, CN | [Link](https://huggingface.co/BAAI/AquilaMed-RL)  | 06/2024 |
 
 ## Corpus Source
 
@@ -111,7 +123,7 @@
   </tr>
 </table>
 
-## Prompt
+## Prompt Templates
 
 The prompt used in Medical Large Language Models are organized here.
 
