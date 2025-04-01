@@ -10,50 +10,117 @@
   - [Evaluation](#evaluation)
 - [Citation](#Citation)
 ## Medical LLMs
-**Detailed Information of Medical Large Language Models. Note: "Para." denotes parameters, "CP" denotes continued pretraining, "IFT" denotes instruction fine-tuning, and "HA" denotes human alignment.**
-| Models | Backbone | Para. (B) | CP | IFT | IFT Methods | HA | Preferred Languages | Open Sources | Data |
-|---|---|---|---|---|---|---|---|---|---|
-| Med-PaLM  | PaLM  | 540 |  | $\checkmark$ | Prompt Tuning |  | EN |  | 01/2023 |
-| ChatDoctor  | LLaMA  | 7 |  | $\checkmark$ | Full Para. |  | EN | [Link](https://github.com/Kent0n-Li/ChatDoctor) | 03/2023 |
-| DoctorGLM   | ChatGLM  | 6 |  | $\checkmark$ | LoRA |  | CN | [Link](https://github.com/xionghonglin/DoctorGLM) | 04/2023 |
-| BenTsao   | LLaMA  | 7 |  | $\checkmark$ | LoRA |  | CN | [Link](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese) | 04/2023 |
-| ChatGLM-Med | ChatGLM  | 6 |  | $\checkmark$ | LoRA |  | CN | [Link](https://github.com/SCIR-HI/Med-ChatGLM) | 04/2023 |
-| MedAlpaca | LLaMA  | 7, 13 |  | $\checkmark$ | Full Para., LoRA |  | CN | [Link](https://github.com/kbressem/medAlpaca) | 04/2023 |
-| PMC-LLaMA | LLaMA2  | 13 | $\checkmark$ | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/chaoyi-wu/PMC-LLaMA) | 04/2023 |
-| HuatuoGPT | Baichuan ,  Ziya-LLaMA  | 7, 13 |  | $\checkmark$ | Full Para. | $\checkmark$ | CN | [Link](https://github.com/FreedomIntelligence/HuatuoGPT) | 05/2023 |
-| ChatMed-Consult  | LLaMA  | 7 |  | $\checkmark$ | LoRA |  | CN | [Link](https://github.com/michael-wzhu/ChatMed) | 05/2023 |
-| Med-PaLM 2  | PaLM2  | - |  | $\checkmark$ | - |  | EN |  | 05/2023 |
-| Clinical Camel  | LLaMA2  | 13, 70 |  | $\checkmark$ | QLoRA |  | EN | [Link](https://github.com/bowang-lab/clinical-camel) | 05/2023 |
-| ShenNong-TCM  | LLaMA  | 7 |  | $\checkmark$ | LoRA |  | CN | [Link](https://github.com/michael-wzhu/ShenNong-TCM-LLM) | 06/2023 |
-| MedicalGPT  | Ziya-LLaMA , Baichuan-Chat  | 13 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | EN, CN | [Link](https://github.com/shibing624/MedicalGPT) | 06/2023 |
-| ClinicalGPT  | BLOOM  | 7 |  | $\checkmark$ | LoRA | $\checkmark$ | CN |  | 06/2023 |
-| DISC-MedLLM | Baichuan  | 13 |  | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/FudanDISC/DISC-MedLLM) | 08/2023 |
-| Zhongjing | Ziya-LLaMA  | 13 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | CN | [Link](https://github.com/SupritYoung/Zhongjing) | 08/2023 |
-| BianQue | ChatGLM  | 6 |  | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/scutcyr/BianQue) | 10/2023 |
-| Alpacare | LLaMA  | 7, 13 |  | $\checkmark$ | Full Para. |  | EN | [Link](https://github.com/XZhang97666/AlpaCare) | 10/2023 |
-| Qilin-Med | Baichuan  | 7 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | CN | [Link](https://github.com/williamliujl/Qilin-Med) | 10/2023 |
-| Taiyi | Qwen  | 7 |  | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/DUTIR-BioNLP/Taiyi-LLM) | 11/2023 |
-| ChiMed-GPT | Ziya-LLaMA  | 13 | $\checkmark$ | $\checkmark$ | Full Para. | $\checkmark$ | CN | [Link](https://github.com/synlp/ChiMed-GPT) | 11/2023 |
-| MediTron | LLaMA2  | 7, 70 | $\checkmark$ | $\checkmark$ | Full Para. |  | EN | [Link](https://github.com/epfLLM/meditron) | 11/2023 |
-| HuatuoGPT-II | Baichuan2 ,  Yi  | 7, 13, 34 |  | $\checkmark$ | Full Para. |  | CN | [Link](https://github.com/FreedomIntelligence/HuatuoGPT-II) | 12/2023 |
-| AntGLM-Med  | GLM  | 10 | $\checkmark$ | $\checkmark$ | Full Para., LoRA, Cpoly |  | EN, CN |  | 12/2023 |
-| GPT-doctor | Baichuan2-Chat  | 13 |  | $\checkmark$ | LoRA |  | CN |  | 12/2023 |
-| EpilepsyLLM  | LLM-JP , LLaMA  | 1.3, 7 |  | $\checkmark$ | LoRA |  | EN, JP | [Link](https://github.com/masa3141/japanese-alpaca-lora) | 01/2024 |
-| BioMistral | Mistral-Instruct  | 7 | $\checkmark$ | $\checkmark$ | QLoRA |  | Multilingual | [Link](https://huggingface.co/BioMistra) | 02/2024 |
-| MMedLM  | InternLM  | 7 | $\checkmark$ | $\checkmark$ | Full Para., LoRA |  | Multilingual | [Link](https://github.com/MAGIC-AI4Med/MMedLM) | 02/2024 |
-| InMD-X  | Neural-Chat  | 7 | $\checkmark$ | $\checkmark$ | Full Para., LoRA |  | EN |  | 02/2024 |
-| Me-LLaMA  | LLaMA2  | 13, 70 | $\checkmark$ | $\checkmark$ | LoRA |  | EN | [Link](https://github.com/BIDS-Xu-Lab/Me-LLaMA) | 02/2024 |
-| JMLR  | LLaMA2  | 7, 13 | $\checkmark$ | $\checkmark$ | - |  | EN |  | 02/2024 |
-| BiMediX  | Mixtral-8x7B  | 8x7 |  | $\checkmark$ | QLoRA |  | EN, Arabic | [Link](https://github.com/mbzuai-oryx/BiMediX) | 02/2024 |
-| OncoGPT  | LLaMA  | 7 |  | $\checkmark$ | LoRA |  | EN | [Link](https://github.com/OncoGPT1/OncoGPT1) | 02/2024 |
-| Apollo  | Qwen ,  Gemma ,  Yi  | 0.5, 1.8, 2, 6, 7 | $\checkmark$ | $\checkmark$ | Full Para. |  | Multilingual | [Link](https://github.com/FreedomIntelligence/Apollo) | 03/2024 |
-| Qibo  | LLaMA  | 7, 13 | $\checkmark$ | $\checkmark$ | Full Para. |  | CN |  | 03/2024 |
-| Hippocrates  | LLaMA2 , Mistral  | 7 | $\checkmark$ | $\checkmark$ | LoRA | $\checkmark$ | EN, CN | [Link](https://cyberiada.github.io/Hippocrates) | 04/2024 |
-| MING-MOE  | Qwen1.5-Chat  | 1.8, 4, 7, 14 |  | $\checkmark$ | LoRA |  | EN, CN | [Link](https://github.com/MediaBrain-SJTU/MING) | 04/2024 |
-| Lingdan  | Baichuan2  | 13 | $\checkmark$ | $\checkmark$ | QLoRA |  | EN, CN | [Link](https://github.com/TCMAI-BJTU/LingdanLLM) | 04/2024 |
-| Aloe  | Mistral ,  LLaMA3  | 7, 8 |  | $\checkmark$ | Full Para. | $\checkmark$ | EN | [Link](https://huggingface.co/HPAI-BSC/Llama3-Aloe-8B-Alpha) | 05/2024 |
-| PediatricsGPT  | Baichuan2  | 7,13 | $\checkmark$ | $\checkmark$ | Full Para., LoRA | $\checkmark$ | CN |  | 06/2024 |
-| Aqulia-Med  | Aquila  | 7 | $\checkmark$ | $\checkmark$ | Full Para.| $\checkmark$ | EN, CN | [Link](https://huggingface.co/BAAI/AquilaMed-RL)  | 06/2024 |
+### Detailed Information of Medical Large Language Models. Note: "Para." denotes parameters, "CP" denotes continued pretraining, "IFT" denotes instruction fine-tuning, and "HA" denotes human alignment.
+| Models          | Backbone                   | Para. (B)         | CP           | IFT          | IFT Methods             | HA           | Preferred Languages | Open Sources                                                 | Applications                                   | Data    |
+|-----------------|----------------------------|-------------------|--------------|--------------|-------------------------|--------------|---------------------|--------------------------------------------------------------|------------------------------------------------|---------|
+| Med-PaLM        | PaLM                       | 540               |              | $\checkmark$ | Prompt Tuning           |              | EN                  |                                                              | Medical Q&A                                    | 01/2023 |
+| ChatDoctor      | LLaMA                      | 7                 |              | $\checkmark$ | Full Para.              |              | EN                  | [Link](https://github.com/Kent0n-Li/ChatDoctor)              | Medical Q&A; Medical Information Retrieval     | 03/2023 |
+| DoctorGLM       | ChatGLM                    | 6                 |              | $\checkmark$ | LoRA                    |              | CN                  | [Link](https://github.com/xionghonglin/DoctorGLM)            | Medical Q&A; Medical Dialogue                  | 04/2023 |
+| BenTsao         | LLaMA                      | 7                 |              | $\checkmark$ | LoRA                    |              | CN                  | [Link](https://github.com/SCIR-HI/Huatuo-Llama-Med-Chinese)  | Medical Q&A; Medical Information Retrieval     | 04/2023 |
+| ChatGLM-Med     | ChatGLM                    | 6                 |              | $\checkmark$ | LoRA                    |              | CN                  | [Link](https://github.com/SCIR-HI/Med-ChatGLM)               | Chinese Medical Q&A                            | 04/2023 |
+| MedAlpaca       | LLaMA                      | 7, 13             |              | $\checkmark$ | Full Para., LoRA        |              | CN                  | [Link](https://github.com/kbressem/medAlpaca)                | Medical Q&A                                    | 04/2023 |
+| PMC-LLaMA       | LLaMA2                     | 13                | $\checkmark$ | $\checkmark$ | Full Para.              |              | CN                  | [Link](https://github.com/chaoyi-wu/PMC-LLaMA)               | Medical Q&A; Medical Dialogue                  | 04/2023 |
+| HuatuoGPT       | Baichuan ,  Ziya-LLaMA     | 7, 13             |              | $\checkmark$ | Full Para.              | $\checkmark$ | CN                  | [Link](https://github.com/FreedomIntelligence/HuatuoGPT)     | Medical Q&A; Medical Dialogue                  | 05/2023 |
+| ChatMed-Consult | LLaMA                      | 7                 |              | $\checkmark$ | LoRA                    |              | CN                  | [Link](https://github.com/michael-wzhu/ChatMed)              | Chinese Medical Q&A                            | 05/2023 |
+| Med-PaLM 2      | PaLM2                      | -                 |              | $\checkmark$ | -                       |              | EN                  |                                                              | Medical Q&A                                    | 05/2023 |
+| Clinical Camel  | LLaMA2                     | 13, 70            |              | $\checkmark$ | QLoRA                   |              | EN                  | [Link](https://github.com/bowang-lab/clinical-camel)         | Medical Q&A; Clinical Note Generation          | 05/2023 |
+| ShenNong-TCM    | LLaMA                      | 7                 |              | $\checkmark$ | LoRA                    |              | CN                  | [Link](https://github.com/michael-wzhu/ShenNong-TCM-LLM)     | Traditional Chinese Medicine Q&A               | 06/2023 |
+| MedicalGPT      | Ziya-LLaMA , Baichuan-Chat | 13                | $\checkmark$ | $\checkmark$ | LoRA                    | $\checkmark$ | EN, CN              | [Link](https://github.com/shibing624/MedicalGPT)             | Medical Q&A                                    | 06/2023 |
+| ClinicalGPT     | BLOOM                      | 7                 |              | $\checkmark$ | LoRA                    | $\checkmark$ | CN                  |                                                              | Medical Q&A; Medical Dialogue                  | 06/2023 |
+| DISC-MedLLM     | Baichuan                   | 13                |              | $\checkmark$ | Full Para.              |              | CN                  | [Link](https://github.com/FudanDISC/DISC-MedLLM)             | Medical Q&A; Medical Dialogue                  | 08/2023 |
+| Zhongjing       | Ziya-LLaMA                 | 13                | $\checkmark$ | $\checkmark$ | LoRA                    | $\checkmark$ | CN                  | [Link](https://github.com/SupritYoung/Zhongjing)             | Medical Dialogue; proactive inquiries          | 08/2023 |
+| BianQue         | ChatGLM                    | 6                 |              | $\checkmark$ | Full Para.              |              | CN                  | [Link](https://github.com/scutcyr/BianQue)                   | Medical Dialogue; proactive inquiries          | 10/2023 |
+| Alpacare        | LLaMA                      | 7, 13             |              | $\checkmark$ | Full Para.              |              | EN                  | [Link](https://github.com/XZhang97666/AlpaCare)              | Medical Q&A; Medical education                 | 10/2023 |
+| Qilin-Med       | Baichuan                   | 7                 | $\checkmark$ | $\checkmark$ | LoRA                    | $\checkmark$ | CN                  | [Link](https://github.com/williamliujl/Qilin-Med)            | Medical Q&A; Medical Dialogue                  | 10/2023 |
+| Taiyi           | Qwen                       | 7                 |              | $\checkmark$ | QLoRA                   |              | EN, CN              | [Link](https://github.com/DUTIR-BioNLP/Taiyi-LLM)            | Natural Language Processing in Medicine        | 11/2023 |
+| ChiMed-GPT      | Ziya-LLaMA                 | 13                | $\checkmark$ | $\checkmark$ | Full Para.              | $\checkmark$ | CN                  | [Link](https://github.com/synlp/ChiMed-GPT)                  | Medical Q&A; Medical Dialogue                  | 11/2023 |
+| MediTron        | LLaMA2                     | 7, 70             | $\checkmark$ | $\checkmark$ | Full Para.              |              | EN                  | [Link](https://github.com/epfLLM/meditron)                   | Medical Q&A                                    | 11/2023 |
+| HuatuoGPT-II    | Baichuan2 ,  Yi            | 7, 13, 34         |              | $\checkmark$ | Full Para.              |              | CN                  | [Link](https://github.com/FreedomIntelligence/HuatuoGPT-II)  | Medical Q&A                                    | 12/2023 |
+| AntGLM-Med      | GLM                        | 10                | $\checkmark$ | $\checkmark$ | Full Para., LoRA, Cpoly |              | EN, CN              |                                                              | Medical Q&A                                    | 12/2023 |
+| GPT-doctor      | Baichuan2-Chat             | 13                |              | $\checkmark$ | LoRA                    |              | CN                  |                                                              | Medical Dialogue                               | 12/2023 |
+| EpilepsyLLM     | LLM-JP , LLaMA             | 1.3, 7            |              | $\checkmark$ | LoRA                    |              | EN, JP              | [Link](https://github.com/masa3141/japanese-alpaca-lora)     | Epilepsy                                       | 01/2024 |
+| BioMistral      | Mistral-Instruct           | 7                 | $\checkmark$ | $\checkmark$ | QLoRA                   |              | Multilingual        | [Link](https://huggingface.co/BioMistra)                     | Medical Q&A                                    | 02/2024 |
+| MMedLM          | InternLM                   | 7                 | $\checkmark$ | $\checkmark$ | Full Para., LoRA        |              | Multilingual        | [Link](https://github.com/MAGIC-AI4Med/MMedLM)               | Medical Q&A                                    | 02/2024 |
+| InMD-X          | Neural-Chat                | 7                 | $\checkmark$ | $\checkmark$ | Full Para., LoRA        |              | EN                  |                                                              | Internal Medicine                              | 02/2024 |
+| Me-LLaMA        | LLaMA2                     | 13, 70            | $\checkmark$ | $\checkmark$ | LoRA                    |              | EN                  | [Link](https://github.com/BIDS-Xu-Lab/Me-LLaMA)              | Medical Q&A; NLP in Medicine                   | 02/2024 |
+| JMLR            | LLaMA2                     | 7, 13             | $\checkmark$ | $\checkmark$ | -                       |              | EN                  |                                                              | Medical Q&A                                    | 02/2024 |
+| BiMediX         | Mixtral-8x7B               | 8x7               |              | $\checkmark$ | QLoRA                   |              | EN, Arabic          | [Link](https://github.com/mbzuai-oryx/BiMediX)               | Medical Q&A; Medical Dialogue                  | 02/2024 |
+| OncoGPT         | LLaMA                      | 7                 |              | $\checkmark$ | LoRA                    |              | EN                  | [Link](https://github.com/OncoGPT1/OncoGPT1)                 | Oncology                                       | 02/2024 |
+| Apollo          | Qwen ,  Gemma ,  Yi        | 0.5, 1.8, 2, 6, 7 | $\checkmark$ | $\checkmark$ | Full Para.              |              | Multilingual        | [Link](https://github.com/FreedomIntelligence/Apollo)        | Medical Q&A                                    | 03/2024 |
+| Qibo            | LLaMA                      | 7, 13             | $\checkmark$ | $\checkmark$ | Full Para.              |              | CN                  |                                                              | Traditional Chinese Medicine Dialogue          | 03/2024 |
+| Hippocrates     | LLaMA2 , Mistral           | 7                 | $\checkmark$ | $\checkmark$ | LoRA                    | $\checkmark$ | EN, CN              | [Link](https://cyberiada.github.io/Hippocrates)              | Medical Q&A                                    | 04/2024 |
+| MING-MOE        | Qwen1.5-Chat               | 1.8, 4, 7, 14     |              | $\checkmark$ | LoRA                    |              | EN, CN              | [Link](https://github.com/MediaBrain-SJTU/MING)              | Medical Q&A; Medical Dialogue; NLP in Medicine | 04/2024 |
+| Lingdan         | Baichuan2                  | 13                | $\checkmark$ | $\checkmark$ | QLoRA                   |              | EN, CN              | [Link](https://github.com/TCMAI-BJTU/LingdanLLM)             | Herbal prescription recommendations            | 04/2024 |
+| UltraMedical    | LLaMA3                     | 8,70              |              | $\checkmark$ | -                       | $\checkmark$ | EN                  | [Link](https://github.com/TsinghuaC3I/UltraMedical)          | Medical Q&A                                    | 04/2024 |
+| Aloe            | Mistral ,  LLaMA3          | 7, 8              |              | $\checkmark$ | Full Para.              | $\checkmark$ | EN                  | [Link](https://huggingface.co/HPAI-BSC/Llama3-Aloe-8B-Alpha) | Medical Q&A                                    | 05/2024 |
+| Hypnos          | LLaMA                      | 7                 |              | $\checkmark$ | LoRA                    |              | CN                  |                                                              | Chinese Anesthesia Q&A                         | 05/2024 |
+| PediatricsGPT   | Baichuan2                  | 7,13              | $\checkmark$ | $\checkmark$ | Full Para., LoRA        | $\checkmark$ | CN                  |                                                              | Evidence-based diagnosis                       | 06/2024 |
+| Aqulia-Med      | Aquila                     | 7                 | $\checkmark$ | $\checkmark$ | Full Para.              | $\checkmark$ | EN, CN              | [Link](https://huggingface.co/BAAI/AquilaMed-RL)             | Medical Q&A                                    | 06/2024 |
+| Med42-V2        | LLaMA 3.1                  | 8,70              |              | $\checkmark$ | Full Para.              | $\checkmark$ | EN                  | [Link](https://huggingface.co/m42-health)                    | Medical Q&A                                    | 08/2024 |
+| MMedIns-Llama 3 | MMed-Llama 3               | 8                 |              | $\checkmark$ | -                       |              | EN                  | [Link](https://github.com/MAGIC-AI4Med/MedS-Ins)             | Medical Q&A; NLP in Medicine                   | 09/2024 |
+| Huatuogpt-o1    | LLaMa-3.1-Insturct         | 8,70              |              | $\checkmark$ | -                       | $\checkmark$ | EN, CN              | [Link](https://github.com/FreedomIntelligence/HuatuoGPT-o1)  | Chinese Medical Q&A                            | 12/2024 |
+
+
+### Model training costs. "Para." indicates the number of model parameters. ";" is used to separate different training stages. "+" indicates different training sub-stages within a training stage.
+|     Paradigms    |     Models             |     Para.   (B)    |     Train   Data Scaling             |     Epoch     |     Devices            |     Hours    |     GPU Hours    |
+|------------------|------------------------|--------------------|--------------------------------------|---------------|------------------------|--------------|------------------|
+|     IFT          |     ChatGLM-Med        |     6              |     7.6K items                       |     3         |     1*A100             |              |                  |
+|     IFT          |     DoctorGLM          |     6              |     882K items                       |     1         |     1*A100             |     13       |     13           |
+|     IFT          |     BianQue            |     6              |     2,437K items                     |     1         |     8*A800             |     66       |     528          |
+|     IFT          |     EpilepsyLLM        |     7              |     52.2K items                      |     -         |     4*A100             |     3        |     12           |
+|     IFT          |     ChatDoctor         |     7              |     152K items                       |     3         |     6*A100             |     3        |     18           |
+|     IFT          |     OncoGPT            |     7              |     332K items                       |     3         |     1*A100             |     15       |     15           |
+|     IFT          |     Taiyi              |     7              |     1,114K items                     |     5+3       |     8*A40              |     113      |     904          |
+|     IFT          |     Hypnos             |     7              |     8,217K                           |     1+3       |     8*A100             |              |                  |
+|     IFT          |     MMedIns-Llama 3    |     8              |     5M items                         |     5         |     32*Ascend910B      |     383.5    |     12,272       |
+|     IFT          |     Alpacare           |     13             |     52K items                        |     5         |     4*A100             |              |                  |
+|     IFT          |     DISC-MedLLM        |     13             |     514K items                       |     1+1       |     4*A800             |              |                  |
+|     IFT          |     GPT-doctor         |     13             |     1,939K items                     |     4         |     8*A100             |     60       |     480          |
+|     IFT          |     JMLR               |     13             |     _                                |     5         |     4*A100             |     37       |                  |
+|     IFT          |     MING-MOE           |     14             |     300K items                       |     1         |     8*A100             |              |                  |
+|     IFT          |     Clinical Camel     |     70             |     174K items                       |     1         |     1*H100             |              |                  |
+|     IFT          |     BiMediX            |     8x7B           |     1311.6K items                    |     2         |     8*A100             |     35       |     280          |
+|     CP-IFT       |     BioMistral         |     7              |     3B token, 405K items             |     1.5; 3    |     32*A100            |     156      |     5000         |
+|     CP-IFT       |     MMedLM 2           |     7              |     25.5B tokens; 45K items          |     -;-       |     8*A100             |     480      |     3840         |
+|     CP-IFT       |     AntGLM-Med-10B     |     10             |     15.39B Tokens; 632K items        |     -;-       |     40*A100            |              |                  |
+|     CP-IFT       |     PMC-LLaMA          |     13             |     79B tokens; 202M tokens          |     5;3       |     32*A100; 8*A100    |              |                  |
+|     CP-IFT       |     Qibo               |     13             |     1277.6MB;-                       |     -;-       |     16*Ascend 910      |              |                  |
+|     CP-IFT       |     Lindan             |     13             |     304.177M tokens; 201K            |     4;4       |     8*A100             |     22       |     176          |
+|     CP-IFT       |     MediTron           |     70             |     48.1B tokens; 369K items         |     1;3       |     128*A100           |     332      |     42,496       |
+|     CP-IFT       |     Me-LLaMA           |     70             |     129B tokens; 214K items          |     1;3       |     160*A100           |     770      |     112,560      |
+|     IFT-HA       |     Aloe               |     8              |     872K items; 12K items            |     4; 1      |     4*A100             |     1,750    |     7000         |
+|     IFT-HA       |     HuatuoGPT          |     13             |     226K items;-                     |     3; 4      |     8*A100             |              |                  |
+|     IFT-HA       |     MED42-V2           |     70             |     1296K items; 120K items          |     2;1       |     48*H100            |              |                  |
+|     CP-IFT-HA    |     Zhongjing          |     13             |     1086MB; 490K items               |     4;3;2     |     4*A100             |     221      |     884          |
+|     CP-IFT-HA    |     Qilin-Med          |     7              |     2,122M Tokens；17,779K  items    |     3;-;-     |     8*A100             |              |                  |
+|     CP-IFT-HA    |     PediatricsGPT      |     13             |     975.8M；347K items               |     1;3;5     |     8*A800             |              |                  |
+
+### Model performance comparison. 'Para.' indicates the number of model parameters. ';' is used to separate different training stages. '+' indicates different training sub-stages within a training stage.
+
+|     Paradigms    |     Models             |     Para. (B)    |     Train Data Scaling                             |     Epoch        |     MedQA    |     MedMCQA    |     PubMedQA    |
+|------------------|------------------------|------------------|----------------------------------------------------|------------------|--------------|----------------|-----------------|
+|     IFT          |     MMedIns-Llama 3    |     8            |     5M items                                       |     5            |     63.6     |     57.1       |     78.2        |
+|     IFT          |     Alpacare           |     13           |     52K items                                      |     5            |     35.5     |     33.5       |     74.8        |
+|     IFT          |     JMLR               |     13           |     -                                              |     5            |     61.3     |     -          |     -           |
+|     IFT          |     MING-MOE           |     14           |     300K items                                     |     1            |     51.85    |     41.21      |     -           |
+|     IFT          |     HuatuoGPT-II       |     34           |     5,394K Items                                   |     1+3          |     45.68    |     47.41      |     -           |
+|     IFT          |     Clinical Camel     |     70           |     174K items                                     |     1            |     53.4     |     47         |     74.3        |
+|     IFT          |     BiMediX            |     8x7B         |     1,311K items                                   |     2            |     54       |     55.8       |     78.6        |
+|     IFT          |     Med-PaLM           |     540          |     65 items                                       |     1            |     67.6     |     57.6       |     79          |
+|     IFT          |     Med-PaLM-2         |     340          |     193Kitems                                      |     -            |     86.5     |     72.3       |     81.8        |
+|     CP-IFT       |     BioMistral         |     7            |     3B token, 405K items                           |     1.5; 3       |     42.8     |     48.1       |     77.5        |
+|     CP-IFT       |     Apollo             |     7            |     2054.4M Tokens;  481.9M Tokens                 |     1; 2         |     56       |                |                 |
+|     CP-IFT       |     AntGLM-Med         |     10           |     15.39B Tokens; 632K items                      |     -; -         |     -        |     -          |     80.6        |
+|     CP-IFT       |     PMC-LLaMA          |     13           |     79B tokens; 202M tokens                        |     5; 3         |     -        |     56.04      |     77.9        |
+|     CP-IFT       |     MediTron           |     70           |     48.1B tokens; 369K items                       |     1; 3         |     70.2     |     66         |     81.6        |
+|     CP-IFT       |     Me-LLaMA           |     70           |     129B tokens; 214K items                        |     1; 3         |     42.7     |     44.9       |     70          |
+|     IFT-HA       |     Aloe               |     8            |     872K items; 12K items                          |     4; 1         |     64.47    |     69.14      |     71.01       |
+|     IFT-HA       |     Huatuogpt-o1       |     70           |     20K items; 20K items                           |     3; 3         |     83.3     |     73.6       |     80.6        |
+|     IFT-HA       |     UltraMedical       |     70           |     600K items;    100K items                      |     2; 1         |     85.4     |     74.7       |     78.8        |
+|     IFT-HA       |     Med42-v2           |     70           |     1,296K items; 120K items                       |     2; 1         |     80.4     |     72.4       |                 |
+|     CP-IFT-HA    |     Hippocrates        |     7            |     298M tokens; 182.9M tokens; 15,258 items       |     1; 3; -      |     50.6     |     54.3       |     74.7        |
+|     CP-IFT-HA    |     Aqulia-Med         |     7            |     80B Tokens; 320K items; 12,727 items           |     1+1; 2; 2    |     41.56    |     38.23      |     72.4        |
+|     CP-IFT-HA    |     ChiMed-GPT         |     13           |     369,800 items; 1,269,787 items；4000 items;    |     -; -; -      |     44.5     |     -          |     -           |
 
 ## Corpus Source
 
