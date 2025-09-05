@@ -59,7 +59,9 @@
 | Med42-V2        | LLaMA 3.1                  | 8,70              |              | $\checkmark$ | Full Para.              | $\checkmark$ | EN                  | [Link](https://huggingface.co/m42-health)                    | Medical Q&A                                    | 08/2024 |
 | MMedIns-Llama 3 | MMed-Llama 3               | 8                 |              | $\checkmark$ | -                       |              | EN                  | [Link](https://github.com/MAGIC-AI4Med/MedS-Ins)             | Medical Q&A; NLP in Medicine                   | 09/2024 |
 | Huatuogpt-o1    | LLaMa-3.1-Insturct         | 8,70              |              | $\checkmark$ | -                       | $\checkmark$ | EN, CN              | [Link](https://github.com/FreedomIntelligence/HuatuoGPT-o1)  | Chinese Medical Q&A                            | 12/2024 |
-
+|FineMedLM-o1  | LLaMA3.1 | 8 | | $\checkmark$ | Full Para. | $\checkmark$ | EN, CN | [Link](https://github.com/hongzhouyu/FineMed) | Medical Q&A; Reasoning | 01/2025 |
+|Citrus| LLaMA3.1, Qwen2.5 | 70, 72| $\checkmark$ | $\checkmark$ | Full Para. | $\checkmark$ | EN, CN | [Link](https://github.com/jdh-algo/Citrus) |Medical Q&A; Reasoning | 02/2025 |
+|ClinicalGPT-R1 | Qwen2.5-Instruct | 7 | | $\checkmark$ |- | $\checkmark$ | EN, CN  |[Link](https://github.com/medfound/medfound) |Medical Q&A; Reasoning | 04/2025|
 
 ### Model training costs. "Para." indicates the number of model parameters. ";" is used to separate different training stages. "+" indicates different training sub-stages within a training stage.
 |     Paradigms    |     Models             |     Para.   (B)    |     Train   Data Scaling             |     Epoch     |     Devices            |     Hours    |     GPU Hours    |
