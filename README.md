@@ -163,7 +163,7 @@
   </tr>
   <tr>
     <td>NLP Tasks</td>
-    <td><a href="https://github.com/FreedomIntelligence/Medical_NLP/blob/master/English_vision.md">Medical_NLP</a>, <a href="https://github.com/GanjinZero/awesome_Chinese_medical_NLP">Chinese_medical_NLP</a></td>
+    <td><a href="https://github.com/FreedomIntelligence/Medical_NLP/blob/master/English_vision.md">Medical_NLP</a>, <a href="https://github.com/GanjinZero/awesome_Chinese_medical_NLP">Chinese_medical_NLP</a>, <a href="https://e3c.fbk.eu/about/home">European Clinical Case Corpus</a></td>
   </tr></thead>
   <tr>
     <td rowspan="6">Public Medical Corpus</td>
@@ -646,3 +646,4 @@ Please act as an impartial judge and evaluate the quality of the responses provi
 }
 
 ```
+
