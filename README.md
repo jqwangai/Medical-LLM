@@ -124,6 +124,23 @@
 |     CP-IFT-HA    |     Aqulia-Med         |     7            |     80B Tokens; 320K items; 12,727 items           |     1+1; 2; 2    |     41.56    |     38.23      |     72.4        |
 |     CP-IFT-HA    |     ChiMed-GPT         |     13           |     369,800 items; 1,269,787 items；4000 items;    |     -; -; -      |     44.5     |     -          |     -           |
 
+### Model Performance and Training Cost Comparison. 'Para.' indicates the number of model parameters. ';' is used to separate different training stages. '+' indicates different training sub-stages within a training stage.
+|     Paradigms    	|     Models             	|     Para. (B)    	|     Train Data Scaling           	|     Devices            	|     Hours    	|     Epoch     	|     MedQA    	|     MedMCQA    	|     PubMedQA    	|
+|------------------	|------------------------	|------------------	|----------------------------------	|------------------------	|--------------	|---------------	|--------------	|----------------	|-----------------	|
+|     IFT          	|     MMedIns-Llama 3    	|     8            	|     5M items                     	|     32*Ascend910B      	|     383.5    	|     5         	|     63.6     	|     57.1       	|     78.2        	|
+|     IFT          	|     AlpaCare           	|     13           	|     52K items                    	|     4*A100             	|     -        	|     5         	|     35.5     	|     33.5       	|     74.8        	|
+|     IFT          	|     JMLR               	|     13           	|     -                            	|     4*A100             	|     37       	|     5         	|     61.3     	|     -          	|     -           	|
+|     IFT          	|     MING-MOE           	|     14           	|     300K items                   	|     8*A100             	|     -        	|     1         	|     51.85    	|     41.21      	|     -           	|
+|     IFT          	|     Clinical Camel     	|     70           	|     174K items                   	|     1*H100             	|     -        	|     1         	|     53.4     	|     47         	|     74.3        	|
+|     IFT          	|     BiMediX            	|     8x7B         	|     1,311K items                 	|     8*A100             	|     35       	|     2         	|     54       	|     55.8       	|     78.6        	|
+|     CP-IFT       	|     BioMistral         	|     7            	|     3B token, 405K items         	|     32*A100            	|     156      	|     1.5; 3    	|     42.8     	|     48.1       	|     77.5        	|
+|     CP-IFT       	|     AntGLM-Med         	|     10           	|     15.39B Tokens; 632K items    	|     40*A100            	|     -        	|     -; -      	|     -        	|     -          	|     80.6        	|
+|     CP-IFT       	|     PMC-LLaMA          	|     13           	|     79B tokens; 202M tokens      	|     32*A100; 8*A100    	| -            	|     5; 3      	|     -        	|     56.04      	|     77.9        	|
+|     CP-IFT       	|     MediTron           	|     70           	|     48.1B tokens; 369K items     	|     128*A100           	|     332      	|     1; 3      	|     70.2     	|     66         	|     81.6        	|
+|     CP-IFT       	|     Me-LLaMA           	|     70           	|     129B tokens; 214K items      	|     160*A100           	|     770      	|     1; 3      	|     42.7     	|     44.9       	|     70          	|
+|     IFT-HA       	|     Aloe               	|     8            	|     872K items; 12K items        	|     4*A100             	|     1,750    	|     4; 1      	|     64.47    	|     69.14      	|     71.01       	|
+|     IFT-HA       	|     Med42-v2           	|     70           	|     1,296K items; 120K items     	|     48*H100            	|     -        	|     2; 1      	|     80.4     	|     72.4       	| -               	|
+
 ## Corpus Source
 
 <table><thead>
@@ -627,4 +644,5 @@ Please act as an impartial judge and evaluate the quality of the responses provi
   journal={arXiv preprint arXiv:2406.10303},
   year={2024}
 }
+
 ```
